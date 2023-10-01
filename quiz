@@ -1,0 +1,33 @@
+print("*************************************************************WELLCOME TO TAB QUIZ***********************************************************************************")
+name = input("NAME:")
+print("--------------------------------------------------------------------------------------------------------------------------------------------------------------------")
+question = [ {"question":" What is the capital of Maharashtra ?",
+              "option":["A)NAGPUR","B)DELHI","C)MUMBAI"],
+              "answer":"C"},
+             {"question":" 2*3*9(4+6)/4= ?",
+              "option":["A)146","B)136","C)135"],
+              "answer":"C"},
+             {"question":" Who is the prime minister of India  ?",
+              "option":["A)OBAMA","B)MODI","C)AMBANI"],
+              "answer":"B"},
+             {"question":" What a book is called when it is wrote about the life story of a person by him self ?",
+              "option":["A)BIOGRAPHY","B)AUTOBIOGRAPHY","C)NOVEL"],
+              "answer":"B"}]
+t_score = len(question)*10
+score = 0
+for i, question in enumerate(question, start=1):
+  print(f"Question {i}: {question['question']}")
+  for option in question['option']:
+    print(option)
+  ans = input("ANSWER(A/B/C):")
+  if ans == question['answer']:
+    print("HURRAY!!!!! IT'S CORRECT ")
+    score += 10
+    print("--------------------------------------------------------------------------------------------------------------------------------------------------------------------")
+  else :
+    print("WRONG ")
+    print({question['answer']})
+    print("--------------------------------------------------------------------------------------------------------------------------------------------------------------------")
+print("--------------------------------------------------------------------------------------------------------------------------------------------------------------------")
+print(name,"YOUR SCORE IS ", score ,"/",t_score)
+print("--------------------------------------------------------------------------------------------------------------------------------------------------------------------")
