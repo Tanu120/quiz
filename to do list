@@ -1,0 +1,53 @@
+name = input("LIST NAME:")
+print("--------------------------------------------------------------------------------------------------------------------------------------------------------------------")
+print("WELLCOME TO ", name , "list")
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
+todo_list = []
+
+def add(task):
+  todo_list.append(task)
+
+def delete(task):
+  if task in todo_list:
+    todo_list.remove(task)
+  else:
+    print("NOT FOUND")
+
+def view():
+  if todo_list:
+    print(name,"TO DO LIST")
+    for i , task in enumerate(todo_list, start = 1):
+      print(f"{i}){task}")
+  else :
+    print("EMPTY")
+
+while True:
+  print("1) ADD")
+  print("2) REMOVE")
+  print("3) VIEW")
+  print("4) EXIT")
+
+  a = int(input("CHOICE:"))
+
+  if a == 1:
+    task = input("ENTER YOUR TASK:")
+    add(task)
+    print("--------------------------------------------------------------------------------------------------------------------------------------------------------------------")
+
+  elif a == 2:
+    task = input("TASK TO BE REMOVED:")
+    delete(task)
+    print("--------------------------------------------------------------------------------------------------------------------------------------------------------------------")
+
+  elif a == 3:
+    view()
+    print("--------------------------------------------------------------------------------------------------------------------------------------------------------------------")
+
+  elif a == 4:
+    print("THANKYOU",name )
+    break
+
+  else:
+    print("CHOICE NOT AVAILABLE")
+    print("TRY AGAIN")
